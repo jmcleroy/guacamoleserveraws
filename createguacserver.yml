@@ -7,7 +7,7 @@
     - name: Create EC2 instances for ansible node (control node)
       ec2:
         assign_public_ip: yes
-        key_name: "eric-gaucamole"
+        key_name: "eric-guacamole"
         group_id: "sg-017530b37d0ad9807"
         instance_type: "m5.large"
         image: "ami-0e49ab5d9e6e0af11"
