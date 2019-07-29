@@ -19,7 +19,7 @@
 
     - name: Wait for yum lock to finish
       pause:
-        seconds: 30
+        minutes: 1
 
     - name: Install certbot
       yum:
