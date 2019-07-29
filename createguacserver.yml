@@ -13,9 +13,10 @@
         image: "ami-0e49ab5d9e6e0af11"
         region: "{{ ec2_region }}"
         instance_tags:
-          Name: "{{ ec2_name_prefix }}"
+          Name: "{{ ec2_name_prefix }}-guac"
 #        wait: "{{ ec2_wait }}"
         vpc_subnet_id: "subnet-0f8fbee8ce944f31a"
+        wait: yes
         volumes:
           - device_name: /dev/sda1
             volume_type: gp2
