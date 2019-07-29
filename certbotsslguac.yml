@@ -9,7 +9,7 @@
       hostname:
         name: "{{ ec2_name_prefix }}-guac.rhdemo.io"
 
-    - name: Make sure a service is running
+    - name: Make docker is stopped
       systemd:
         state: stopped
         name: docker
