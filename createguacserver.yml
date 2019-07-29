@@ -13,7 +13,7 @@
         image: "ami-0e49ab5d9e6e0af11"
         region: "{{ ec2_region }}"
         instance_tags:
-          name: "{{ ec2_name_prefix }}"
+          Name: "{{ ec2_name_prefix }}"
 #        wait: "{{ ec2_wait }}"
         vpc_subnet_id: "subnet-0f8fbee8ce944f31a"
         volumes:
