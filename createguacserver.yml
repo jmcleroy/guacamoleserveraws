@@ -1,0 +1,23 @@
+---
+- hosts: all
+  gather_facts: no
+  connection: local
+
+  tasks:
+    - name: Create EC2 instances for ansible node (control node)
+      ec2:
+        assign_public_ip: yes
+        key_name: "eric-gaucamole"
+        group: "sg-017530b37d0ad9807"
+        instance_type: "m5.Large"
+        image: "ami-0e49ab5d9e6e0af11"
+        region: "{{ ec2_region }}"
+        instance_tags:
+          name: "{{ ec2_name_prefix }}"
+#        wait: "{{ ec2_wait }}"
+        vpc_subnet_id: "subnet-0f8fbee8ce944f31a"
+        volumes:
+          - device_name: /dev/sda1
+            volume_type: gp2
+            volume_size: "8"
+            delete_on_termination: true
