@@ -9,7 +9,7 @@
         assign_public_ip: yes
         key_name: "eric-gaucamole"
         group_id: "sg-017530b37d0ad9807"
-        instance_type: "m5.Large"
+        instance_type: "m5.large"
         image: "ami-0e49ab5d9e6e0af11"
         region: "{{ ec2_region }}"
         instance_tags:
@@ -21,4 +21,3 @@
             volume_type: gp2
             volume_size: "8"
             delete_on_termination: true
-            
