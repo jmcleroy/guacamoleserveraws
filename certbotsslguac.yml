@@ -44,7 +44,7 @@
         src: "/etc/letsencrypt/live/{{ec2_name_prefix|lower}}.rhdemo.io*/privkey.pem"
         dest: /home/ec2-user/guaws/nginx/ssl/server.key
       when: issue_cert is not failed
-      tag: test
+      tags: test
 
     - name: MOVE SSL Chain
       copy:
@@ -52,7 +52,7 @@
         src: "/etc/letsencrypt/live/{{ec2_name_prefix|lower}}.rhdemo.io*/fullchain.pem"
         dest: /home/ec2-user/guaws/nginx/ssl/server.crt
       when: issue_cert is not failed
-      tag: test
+      tags: test
 
     - name: Unconditionally reboot the machine with all defaults
       reboot:
