@@ -7,7 +7,7 @@
   tasks:
     - name: Change hostname
       hostname:
-        name: "{{ ec2_name_prefix }}-guac.rhdemo.io"
+        name: "{{ ec2_name_prefix|lower }}-guac.rhdemo.io"
 
     - name: Make sure docker is stopped
       systemd:
